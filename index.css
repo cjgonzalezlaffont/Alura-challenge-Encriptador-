@@ -10,7 +10,7 @@ main {
   width: 60%;
   height: 100vh;
   padding: 5% 5%;
-  background: #a7a3dc;
+  background: #d2d0f5;
 }
 
 .area1A img {
@@ -23,6 +23,13 @@ main {
 .area1 textArea {
   width: 85%;
   height: 60vh;
+  border: none;
+  background: #d2d0f5;
+}
+
+.area1 textArea:focus {
+  border: none;
+  box-shadow: none;
 }
 
 .buttonsArea {
@@ -46,14 +53,14 @@ main {
 .area2 {
   width: 40%;
   height: 100vh;
-  background: #a7a3dc;
+  background: #d2d0f5;
 }
 
 .area2A {
   width: 70%;
   height: 70vh;
   margin: 15% 10% 5% 15%;
-  background: #6a669d;
+  background: #ffffff;
   border-radius: 10px;
   padding: 10% 5%;
 }
