@@ -12,14 +12,28 @@
   <body>
     <main>
       <section class="area1">
-        <h1><img src="./images/Logo.png" /></h1>
-        <textarea placeholder="ingrese su texto aqui"></textarea>
+        <div class="area1A"><img src="./images/Logo.png" /></div>
+        <textarea
+          placeholder="Enter your text here"
+          onchange="enableButtons()"
+          id="textInput"
+        ></textarea>
+        <div class="buttonsArea">
+          <button id="Encrypt" class="btn" onclick="encript()" disabled>
+            Encrypt
+          </button>
+          <button id="Decrypt" class="btn" onclick="decrypt()" disabled>
+            Decrypt
+          </button>
+        </div>
       </section>
-      <section class="area2A">
-        <div class="area2B">
-          <p>encriptador</p>
+      <section class="area2">
+        <div class="area2A">
+          <p>Result</p>
         </div>
       </section>
     </main>
+
+    <script src="./app.js"></script>
   </body>
 </html>
