@@ -1,12 +1,16 @@
+let area2msgNotFound = "No message was found.";
+let area2msgQuestion = "What text would you like to encrypt or decrypt?";
+
+showInitials(true);
+
 function enableButtons() {
   let texto = document.getElementById("textInput").value;
-
   if (texto != "") {
-    document.getElementById("Encrypt").removeAttribute("disabled");
-    document.getElementById("Decrypt").removeAttribute("disabled");
+    document.getElementById("btnEncrypt").removeAttribute("disabled");
+    document.getElementById("btnDecrypt").removeAttribute("disabled");
   } else {
-    document.getElementById("Encrypt").setAttribute("disabled", "true");
-    document.getElementById("Decrypt").setAttribute("disabled", "true");
+    document.getElementById("btnEncrypt").setAttribute("disabled", "true");
+    document.getElementById("btnDecrypt").setAttribute("disabled", "true");
     asignTextToElement("p", "");
   }
 }
@@ -18,12 +22,26 @@ function asignTextToElement(element, textElement) {
 
 function encrypt() {
   let text = document.getElementById("textInput").value;
+  showInitials(false);
   asignTextToElement("p", encryptText(text));
 }
 
 function decrypt() {
   let text = document.getElementById("textInput").value;
+  showInitials(false);
   asignTextToElement("p", decryptText(text));
+}
+
+function showInitials(value) {
+  if (value === true) {
+    document.getElementById("imgPuppet").removeAttribute("hidden");
+    asignTextToElement("h3", area2msgNotFound);
+    asignTextToElement("h6", area2msgQuestion);
+  } else {
+    document.getElementById("imgPuppet").setAttribute("hidden", "true");
+    asignTextToElement("h3", "");
+    asignTextToElement("h6", "");
+  }
 }
 
 function encryptText(text) {
