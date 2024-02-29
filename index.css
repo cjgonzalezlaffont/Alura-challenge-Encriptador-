@@ -1,0 +1,242 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 94%;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 94%;
+  display: flex;
+}
+
+.area1 {
+  width: 50%;
+  height: 100%;
+  padding: 5% 5%;
+  background: #d2d0f5;
+}
+
+.area1A img {
+  display: block;
+  width: auto;
+  height: 4vh;
+  padding: 1vh 1vh 0 0;
+  margin-bottom: 15%;
+}
+
+.area1 textArea {
+  width: 85%;
+  height: 50%;
+  border: none;
+  font-size: large;
+  color: black;
+  background: #d2d0f5;
+  margin: 0 0 12% 15%;
+}
+
+.area1 textarea::placeholder {
+  color: rgb(18, 18, 114);
+  font-size: large;
+}
+
+.area1 textArea:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: black;
+}
+
+.infoSection {
+  font-size: small;
+  color: rgb(18, 18, 114);
+  margin: 0 0 3% 8%;
+}
+
+/* .buttonsArea {
+  display: block;
+  width: 100%;
+} */
+
+.buttonsArea {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  width: 100%;
+}
+
+.btnEncrypt {
+  color: #ffffff;
+  background: #0a3871;
+  margin-left: 0 auto 0 0;
+  margin: auto auto;
+  width: 40%;
+  height: 7vh;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.btnEncrypt:hover {
+  font-weight: bold;
+}
+
+.btnDecrypt {
+  color: #0a3871;
+  background: #85aadb;
+  margin: auto auto;
+  width: 40%;
+  height: 7vh;
+  border: 2px solid #0a3871;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.btnDecrypt:enabled {
+  background: #ffffff;
+}
+
+.btnDecrypt:hover {
+  font-weight: bold;
+}
+
+.area2 {
+  width: 30%;
+  height: 100%;
+  padding: 5% 5%;
+  background: #d2d0f5;
+}
+
+.area2A {
+  width: auto;
+  height: 90%;
+  padding: 10% 5%;
+  background: #ffffff;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.area2A p {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.area2A img {
+  margin-top: 5%;
+  width: 100%;
+}
+
+.area2A h3 {
+  font-weight: bold;
+  text-align: center;
+  margin: 1em auto;
+  word-wrap: break-word;
+  white-space: normal;
+  display: block;
+}
+
+.area2A h6 {
+  font-size: smaller;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+  display: block;
+}
+
+#btnCopyTxt {
+  position: relative;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 480px) {
+  body,
+  main {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .area1,
+  .area2 {
+    height: 50%;
+    width: auto;
+    padding: 5% 5%;
+  }
+
+  .area1 textArea {
+    width: 85%;
+    height: 30%;
+    border: none;
+    font-size: large;
+    color: black;
+    background: #d2d0f5;
+  }
+
+  .area2A {
+    width: auto;
+    height: 80%;
+    padding: 10% 5% 10% 5%;
+    background: #ffffff;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .area2A img {
+    margin-top: 5%;
+    width: 70%;
+  }
+
+  #btnCopyTxt {
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+  body,
+  main {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .area1,
+  .area2 {
+    height: 45%;
+    width: auto;
+    padding: 5% 5%;
+  }
+
+  .area1 textArea {
+    width: 85%;
+    height: 25%;
+    border: none;
+    font-size: large;
+    color: black;
+    background: #d2d0f5;
+    margin: 0 0 0 10%;
+  }
+
+  .area2A {
+    width: auto;
+    height: 65%;
+    padding: 10% 5% 10% 5%;
+    background: #ffffff;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .area2A img {
+    margin-top: 5%;
+    width: 30%;
+  }
+
+  #btnCopyTxt {
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
