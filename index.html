@@ -15,9 +15,12 @@
         <div class="area1A"><img src="./images/Logo.png" /></div>
         <textarea
           placeholder="Enter your text here"
-          onchange="enableButtons()"
+          oninput="enableButtons()"
           id="textInput"
         ></textarea>
+        <div class="infoSection">
+          &#9888; Lowercase only (and without accents for other languages)
+        </div>
         <div class="buttonsArea">
           <button
             id="btnEncrypt"
@@ -39,12 +42,20 @@
       </section>
       <section class="area2">
         <div class="area2A">
-          <img src="./images/Muñeco.png" id="imgPuppet" />
+          <img src="./images/boy.png" id="imgBoy" />
           <h3 id="area2msgNotFound">No message was found.</h3>
           <h6 id="area2msgQuestion">
             What text would you like to encrypt or decrypt?
           </h6>
-          <p></p>
+          <p name="results"></p>
+          <button
+            id="btnCopyTxt"
+            class="btnDecrypt"
+            onclick="copyTextBtn()"
+            hidden
+          >
+            copy
+          </button>
         </div>
       </section>
     </main>
